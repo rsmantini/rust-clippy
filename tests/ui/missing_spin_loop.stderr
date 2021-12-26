@@ -1,0 +1,10 @@
+error: busy-waiting loop should at least have a spin loop hint
+  --> $DIR/missing_spin_loop.rs:9:37
+   |
+LL |     while b.load(Ordering::Acquire) {}
+   |                                     ^^ help: try this: `{ std::hint::spin_loop() }`
+   |
+   = note: `-D clippy::missing-spin-loop` implied by `-D warnings`
+
+error: aborting due to previous error
+
