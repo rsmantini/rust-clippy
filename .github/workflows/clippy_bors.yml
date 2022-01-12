@@ -115,7 +115,9 @@ jobs:
       run: cargo build --features deny-warnings,internal
 
     - name: Test
-      run: cargo test --features deny-warnings,internal
+      run: |
+        [[ "${{ runner.os }}" == "Linux" ]] || skip_dogfood=1
+        cargo test --features deny-warnings,internal ${skip_dogfood:+-- --skip dogfood}
 
     - name: Test clippy_lints
       run: cargo test --features deny-warnings,internal
