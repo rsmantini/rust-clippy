@@ -92,6 +92,7 @@ store.register_group(true, "clippy::all", Some("clippy_all"), vec![
     LintId::of(inline_fn_without_body::INLINE_FN_WITHOUT_BODY),
     LintId::of(int_plus_one::INT_PLUS_ONE),
     LintId::of(invalid_utf8_in_unchecked::INVALID_UTF8_IN_UNCHECKED),
+    LintId::of(iter_instead_of_into_iter::ITER_INSTEAD_OF_INTO_ITER),
     LintId::of(large_const_arrays::LARGE_CONST_ARRAYS),
     LintId::of(large_enum_variant::LARGE_ENUM_VARIANT),
     LintId::of(len_zero::COMPARISON_TO_EMPTY),
